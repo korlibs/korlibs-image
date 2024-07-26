@@ -12,7 +12,7 @@ dependencies:
   - com.soywiz:korlibs-image-core:6.0.0
   - com.soywiz:korlibs-io-vfs:6.0.0: exported
   - com.soywiz:korlibs-math:6.0.0: exported
-  - com.soywiz:korlibs-ffi:6.0.0: exported
+  - com.soywiz:korlibs-ffi-legacy:6.0.0: exported
   - com.soywiz:korlibs-string:6.0.0: exported
   - com.soywiz:korlibs-platform:6.0.0: exported
   - com.soywiz:korlibs-compression:6.0.0
