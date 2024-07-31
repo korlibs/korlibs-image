@@ -29,7 +29,7 @@ jobs:
       - { name: Set up JDK, uses: actions/setup-java@v4, with: { distribution: "${{ env.JAVA_DISTRIBUTION }}", java-version: "${{ env.JAVA_VERSION }}" } }
       - { name: Prepare Gradle, uses: gradle/actions/setup-gradle@d9c87d481d55275bb5441eef3fe0e46805f9ef70 } # https://github.com/gradle/actions/releases/tag/v3.5.0
       - { name: Start gradle, run: ./gradlew }
-      - { name: Code coverage, run: ./gradlew koverXmlReport }
+      - { name: Code coverage, run: ./gradlew koverXmlReportJvm }
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
