@@ -1,5 +1,6 @@
 package korlibs.image.text
 
+import korlibs.image.*
 import korlibs.image.font.*
 import korlibs.io.async.*
 import korlibs.io.file.std.*
@@ -12,7 +13,7 @@ class RichTextDataPlacementTest {
     val logger = Logger("RichTextDataPlacementTest")
 
     @Test
-    fun test() = runTest {
+    fun test() = doTest {
         //val result = DefaultTtfFont.renderGlyphToBitmap(42.0, 'A'.code, paint = Colors.WHITE, fill = true, border = 1, effect = null)
         //result.bmp.showImageAndWait()
 
@@ -36,7 +37,7 @@ class RichTextDataPlacementTest {
     }
 
     @Test
-    fun testNegativeFontSize() = runTest {
+    fun testNegativeFontSize() = doTest {
         val font = resourcesVfs["font2/m5x7_16_outline_negative_size.fnt"].readBitmapFont()
         val placements = RichTextData("Text", font = font).place(Rectangle(0, 0, 1000, 1000))
         assertEquals(16.0, font.fontSize)

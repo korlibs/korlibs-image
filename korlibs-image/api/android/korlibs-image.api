@@ -4817,6 +4817,7 @@ public class korlibs/image/format/BaseNativeImageFormatProvider : korlibs/image/
 	public fun getFormats ()Lkorlibs/image/format/ImageFormat;
 	public fun mipmap (Lkorlibs/image/bitmap/Bitmap;)Lkorlibs/image/bitmap/NativeImage;
 	public fun mipmap (Lkorlibs/image/bitmap/Bitmap;I)Lkorlibs/image/bitmap/NativeImage;
+	protected fun toNativeImageSure (Lkorlibs/image/bitmap/Bitmap;)Lkorlibs/image/bitmap/NativeImage;
 	protected fun wrapNative (Lkorlibs/image/bitmap/Bitmap;Lkorlibs/image/format/ImageDecodingProps;)Lkorlibs/image/format/NativeImageResult;
 	protected final fun wrapNativeExt (Lkorlibs/image/bitmap/Bitmap;Lkorlibs/image/format/ImageDecodingProps;)Lkorlibs/image/format/NativeImageResult;
 	public static synthetic fun wrapNativeExt$default (Lkorlibs/image/format/BaseNativeImageFormatProvider;Lkorlibs/image/bitmap/Bitmap;Lkorlibs/image/format/ImageDecodingProps;ILjava/lang/Object;)Lkorlibs/image/format/NativeImageResult;

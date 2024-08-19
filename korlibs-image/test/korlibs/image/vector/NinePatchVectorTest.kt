@@ -39,7 +39,6 @@ class NinePatchVectorTest {
                 ${vector.scaleNinePatch(Size(200, 200)).roundDecimalPlaces(1).toSvgString()}
                 ${vector.toSvgString()}
             """.trimIndent()
-
         )
     }
 

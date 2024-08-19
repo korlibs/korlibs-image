@@ -1,5 +1,6 @@
 package korlibs.image.font
 
+import korlibs.image.*
 import korlibs.io.async.*
 import korlibs.io.file.std.*
 import korlibs.io.lang.*
@@ -9,7 +10,7 @@ import kotlin.test.*
 
 class TTfTest {
     @Test
-    fun test() = runTest {
+    fun test() = doTest {
         val font = resourcesVfs["twemoji-glyf_colr_1.ttf"].readTtfFont()
         val wstr = WString("😀👩🏽‍🦳👨🏻‍🦳")
         val glyph = font[wstr.codePointAt(0)]!!
@@ -25,7 +26,7 @@ class TTfTest {
     }
 
     @Test
-    fun testLigatureAdvancementBug() = runTest {
+    fun testLigatureAdvancementBug() = doTest {
         val font = resourcesVfs["PlayfairDisplay-BoldItalic.ttf"].readTtfFont()
         fun res(str: String, reader: Boolean = true): Pair<Double, Int> {
             val rreader = WStringReader(str)
@@ -52,7 +53,7 @@ class TTfTest {
     }
 
     @Test
-    fun ligaturesEnabledWorks() = runTest {
+    fun ligaturesEnabledWorks() = doTest {
         val font =
             resourcesVfs["font_atkinson/AtkinsonHyperlegible-Bold.ttf"].readTtfFont()
 
@@ -66,7 +67,7 @@ class TTfTest {
     }
 
     @Test
-    fun ligaturesDisabledWorks() = runTest {
+    fun ligaturesDisabledWorks() = doTest {
         val font =
             resourcesVfs["font_atkinson/AtkinsonHyperlegible-Bold.ttf"].readTtfFont(enableLigatures = false)
 

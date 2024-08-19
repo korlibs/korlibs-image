@@ -1,5 +1,6 @@
 package korlibs.image.format
 
+import korlibs.image.*
 import korlibs.image.bitmap.*
 import korlibs.io.file.std.*
 import kotlinx.coroutines.test.*
@@ -12,7 +13,7 @@ class ReadNativeImageNativeFormat {
     val png2Data = Base64.decode("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4XmP4X2LoAgAGAwHpGKW+VwAAAABJRU5ErkJggg==")
 
     @Test
-    fun testNativeImageShouldBeConsistentPerPlatform() = runTest {
+    fun testNativeImageShouldBeConsistentPerPlatform() = doTest {
         val bmp0 = nativeImageFormatProvider.create(1, 1, null)
         val bmp1 = resourcesVfs["bubble-chat.9.png"].readNativeImage()
         val bmp2 = resourcesVfs["bubble-chat.9.png"].readNativeImage(ImageDecodingProps(asumePremultiplied = true))

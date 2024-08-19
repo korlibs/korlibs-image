@@ -185,6 +185,7 @@ open class BaseNativeImageFormatProvider : NativeImageFormatProvider() {
         return CoreImage.encode(image.mainBitmap.toCoreImage(), CoreImageFormat.fromMimeType(props.mimeType), props.quality)
     }
 
+    override fun toNativeImageSure(bmp: Bitmap): NativeImage = createBitmapNativeImage(bmp)
     protected open fun createBitmapNativeImage(bmp: Bitmap): BitmapNativeImage = BitmapNativeImage(bmp)
     protected open fun wrapNative(bmp: Bitmap, props: ImageDecodingProps): NativeImageResult {
         val bmp32: Bitmap32 = bmp.toBMP32IfRequired()

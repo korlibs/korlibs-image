@@ -1,5 +1,6 @@
 package korlibs.image.vector
 
+import korlibs.image.*
 import korlibs.image.color.*
 import korlibs.image.util.*
 import korlibs.image.vector.format.*
@@ -12,7 +13,7 @@ import kotlin.test.*
 
 class NinePatchShapeTest {
     @Test
-    fun test() = runTest {
+    fun test() = doTest {
         val shape = resourcesVfs["chat-bubble.svg"].readSVG().toShape()
         val ninePatch = shape.toNinePatchFromGuides(guideColor = Colors.FUCHSIA)
         assertEquals(Size(128, 128), ninePatch.size)
