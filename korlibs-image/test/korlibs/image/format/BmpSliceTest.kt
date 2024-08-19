@@ -1,5 +1,6 @@
 package korlibs.image.format
 
+import korlibs.image.*
 import korlibs.image.atlas.*
 import korlibs.image.bitmap.*
 import korlibs.io.async.*
@@ -12,14 +13,14 @@ class BmpSliceTest {
     val props = ImageDecodingProps(format = ImageFormats(PNG))
 
     @Test
-    fun testName() = runTest {
+    fun testName() = doTest {
         val slice = resourcesVfs["rgba.png"].readBitmapSlice(name = "hello", props = props)
         assertEquals("hello", slice.name)
         assertEquals(SizeInt(4, 1), slice.bounds.size)
     }
 
     @Test
-    fun testPacking() = runTest {
+    fun testPacking() = doTest {
         val atlas = AtlasPacker.pack(listOf(
             resourcesVfs["rgba.png"].readBitmapSlice(name = "hello", props = props)
         ))
@@ -29,7 +30,7 @@ class BmpSliceTest {
     }
 
     @Test
-    fun testPackingMutable() = runTest {
+    fun testPackingMutable() = doTest {
         val atlas = MutableAtlasUnit()
         resourcesVfs["rgba.png"].readBitmapSlice(atlas = atlas, name = "hello", props = props)
         val slice = atlas["hello"]

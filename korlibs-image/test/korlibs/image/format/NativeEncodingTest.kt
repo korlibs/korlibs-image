@@ -1,5 +1,6 @@
 package korlibs.image.format
 
+import korlibs.image.*
 import korlibs.image.bitmap.*
 import korlibs.image.color.*
 import korlibs.io.async.*
@@ -11,7 +12,7 @@ import kotlin.test.*
 
 class NativeEncodingTest {
     @Test
-    fun test() = runTest {
+    fun test() = doTest {
         if (Platform.isJsNodeJs) RegisteredImageFormats.register(PNG)
         val bytes = nativeImageFormatProvider.encodeSuspend(Bitmap32(10, 10, Colors.RED), ImageEncodingProps("image.png"))
         assertEquals(Size(10, 10), PNG.decodeHeader(bytes.openSync())!!.size)
