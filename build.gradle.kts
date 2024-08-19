@@ -191,6 +191,7 @@ open class DenoTestTask : AbstractTestTask() {
             val process = ProcessBuilder(buildList<String> {
                 add("deno")
                 add("test")
+                add("--trace-ops")
                 add("--unstable-ffi")
                 add("--unstable-webgpu")
                 add("-A")

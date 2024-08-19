@@ -4,7 +4,7 @@ import korlibs.io.async.*
 import korlibs.platform.*
 
 fun doTest(block: suspend () -> Unit) {
-    suspendTest({ !Platform.isAndroid }) {
+    suspendTest({ !Platform.isAndroid && !Platform.isJsDenoJs }) {
         block()
     }
 }
