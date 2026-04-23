@@ -1,8 +1,6 @@
 package korlibs.image.bitmap
 
 import korlibs.image.color.Colors
-import korlibs.image.color.RgbaArray
-import kotlin.native.concurrent.SharedImmutable
 
 @PublishedApi internal val Bitmaps_transparent: BmpSlice32 = Bitmap32(
     1,
