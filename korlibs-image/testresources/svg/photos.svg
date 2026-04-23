@@ -38,7 +38,7 @@
                            "http://farm2.static.flickr.com/1159/534271166_db0f114a5d_o.jpg",
                            "http://farm1.static.flickr.com/120/313853602_d759910c1e_b.jpg",
                            "http://farm1.static.flickr.com/122/313940834_8bf97d364e_b.jpg" ];
-            } else if (document.location.toString().toLowerCase().indexOf("users") != -1) {
+            } else if (document.location.toString().lowercase().indexOf("users") != -1) {
                 images = ["file:///Library/Desktop Pictures/Nature/Flowing Rock.jpg",
                           "file:///Library/Desktop Pictures/Nature/Stones.jpg",
                           "file:///Library/Desktop Pictures/Plants/Lotus.jpg",

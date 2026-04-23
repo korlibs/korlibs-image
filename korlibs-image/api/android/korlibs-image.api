@@ -1,6 +1,6 @@
 public abstract interface class korlibs/image/Quality {
 	public static final field Companion Lkorlibs/image/Quality$Companion;
-	public abstract fun compareTo (Lkorlibs/image/Quality;)I
+	public fun compareTo (Lkorlibs/image/Quality;)I
 	public abstract fun getLevel ()F
 }
 
@@ -260,8 +260,8 @@ public final class korlibs/image/atlas/AtlasKt {
 }
 
 public abstract interface class korlibs/image/atlas/AtlasLookup {
-	public abstract fun get (Ljava/lang/String;)Lkorlibs/math/geom/slice/RectSlice;
-	public abstract fun tryGet (Ljava/lang/String;)Lkorlibs/math/geom/slice/RectSlice;
+	public fun get (Ljava/lang/String;)Lkorlibs/math/geom/slice/RectSlice;
+	public fun tryGet (Ljava/lang/String;)Lkorlibs/math/geom/slice/RectSlice;
 	public abstract fun tryGetEntryByName (Ljava/lang/String;)Lkorlibs/image/atlas/Atlas$Entry;
 }
 
@@ -954,7 +954,7 @@ public abstract interface class korlibs/image/bitmap/ForcedTexId {
 	public static final field TEXTURE_2D I
 	public static final field TEXTURE_EXTERNAL I
 	public abstract fun getForcedTexId ()I
-	public abstract fun getForcedTexTarget ()I
+	public fun getForcedTexTarget ()I
 }
 
 public final class korlibs/image/bitmap/ForcedTexId$Companion {
@@ -3100,6 +3100,7 @@ public final class korlibs/image/font/BaseTtfFont$ColorStop {
 
 public abstract interface class korlibs/image/font/BaseTtfFont$ColrGlyphInfo {
 	public abstract fun getColorShape (I)Lkorlibs/image/vector/Shape;
+	public static synthetic fun getColorShape$default (Lkorlibs/image/font/BaseTtfFont$ColrGlyphInfo;IILjava/lang/Object;)Lkorlibs/image/vector/Shape;
 }
 
 public final class korlibs/image/font/BaseTtfFont$ColrGlyphInfo$DefaultImpls {
@@ -3548,30 +3549,30 @@ public final class korlibs/image/font/BaseTtfFont$Table {
 
 public abstract interface class korlibs/image/font/BitmapFont : korlibs/image/font/Font {
 	public static final field Companion Lkorlibs/image/font/BitmapFont$Companion;
-	public abstract fun get (C)Lkorlibs/image/font/BitmapFont$Glyph;
-	public abstract fun get (I)Lkorlibs/image/font/BitmapFont$Glyph;
+	public fun get (C)Lkorlibs/image/font/BitmapFont$Glyph;
+	public fun get (I)Lkorlibs/image/font/BitmapFont$Glyph;
 	public abstract fun getAnyGlyph ()Lkorlibs/image/font/BitmapFont$Glyph;
 	public abstract fun getBase ()D
-	public abstract fun getBaseBmp ()Lkorlibs/image/bitmap/Bitmap;
+	public fun getBaseBmp ()Lkorlibs/image/bitmap/Bitmap;
 	public abstract fun getDistanceField ()Ljava/lang/String;
-	public abstract fun getFontMetrics (DLkorlibs/image/font/FontMetrics;)Lkorlibs/image/font/FontMetrics;
+	public fun getFontMetrics (DLkorlibs/image/font/FontMetrics;)Lkorlibs/image/font/FontMetrics;
 	public abstract fun getFontSize ()D
-	public abstract fun getGlyph (C)Lkorlibs/image/font/BitmapFont$Glyph;
-	public abstract fun getGlyph (I)Lkorlibs/image/font/BitmapFont$Glyph;
-	public abstract fun getGlyphMetrics (DILkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;)Lkorlibs/image/font/GlyphMetrics;
+	public fun getGlyph (C)Lkorlibs/image/font/BitmapFont$Glyph;
+	public fun getGlyph (I)Lkorlibs/image/font/BitmapFont$Glyph;
+	public fun getGlyphMetrics (DILkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;)Lkorlibs/image/font/GlyphMetrics;
 	public abstract fun getGlyphs ()Lkorlibs/datastructure/IntMap;
 	public abstract fun getInvalidGlyph ()Lkorlibs/image/font/BitmapFont$Glyph;
-	public abstract fun getKerning (CC)Lkorlibs/image/font/BitmapFont$Kerning;
-	public abstract fun getKerning (DII)D
+	public fun getKerning (CC)Lkorlibs/image/font/BitmapFont$Kerning;
+	public fun getKerning (DII)D
 	public abstract fun getKerning (II)Lkorlibs/image/font/BitmapFont$Kerning;
 	public abstract fun getKernings ()Lkorlibs/datastructure/IntMap;
 	public abstract fun getLineHeight ()D
 	public abstract fun getNaturalFontMetrics ()Lkorlibs/image/font/FontMetrics;
 	public abstract fun getNaturalNonExistantGlyphMetrics ()Lkorlibs/image/font/GlyphMetrics;
 	public abstract fun getOrNull (I)Lkorlibs/image/font/BitmapFont$Glyph;
-	public abstract fun getTextScale (D)D
-	public abstract fun measureWidth (Ljava/lang/String;)I
-	public abstract fun renderGlyph (Lkorlibs/image/vector/Context2d;DILkorlibs/math/geom/Vector2D;Ljava/lang/Boolean;Lkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;Lkotlin/jvm/functions/Function0;)Z
+	public fun getTextScale (D)D
+	public fun measureWidth (Ljava/lang/String;)I
+	public fun renderGlyph (Lkorlibs/image/vector/Context2d;DILkorlibs/math/geom/Vector2D;Ljava/lang/Boolean;Lkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;Lkotlin/jvm/functions/Function0;)Z
 }
 
 public final class korlibs/image/font/BitmapFont$Companion {
@@ -3747,13 +3748,17 @@ public final class korlibs/image/font/FolderBasedNativeSystemFontProvider$Compan
 }
 
 public abstract interface class korlibs/image/font/Font : korlibs/datastructure/Extra, korlibs/io/resources/Resourceable {
-	public abstract fun get (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun get (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getFontMetrics (DLkorlibs/image/font/FontMetrics;)Lkorlibs/image/font/FontMetrics;
+	public static synthetic fun getFontMetrics$default (Lkorlibs/image/font/Font;DLkorlibs/image/font/FontMetrics;ILjava/lang/Object;)Lkorlibs/image/font/FontMetrics;
 	public abstract fun getGlyphMetrics (DILkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;)Lkorlibs/image/font/GlyphMetrics;
+	public static synthetic fun getGlyphMetrics$default (Lkorlibs/image/font/Font;DILkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;ILjava/lang/Object;)Lkorlibs/image/font/GlyphMetrics;
 	public abstract fun getKerning (DII)D
 	public abstract fun getName ()Ljava/lang/String;
-	public abstract fun getOrNull ()Lkorlibs/image/font/Font;
+	public synthetic fun getOrNull ()Ljava/lang/Object;
+	public fun getOrNull ()Lkorlibs/image/font/Font;
 	public abstract fun renderGlyph (Lkorlibs/image/vector/Context2d;DILkorlibs/math/geom/Vector2D;Ljava/lang/Boolean;Lkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;Lkotlin/jvm/functions/Function0;)Z
+	public static synthetic fun renderGlyph$default (Lkorlibs/image/font/Font;Lkorlibs/image/vector/Context2d;DILkorlibs/math/geom/Vector2D;Ljava/lang/Boolean;Lkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Z
 }
 
 public final class korlibs/image/font/Font$DefaultImpls {
@@ -4432,7 +4437,8 @@ public abstract class korlibs/image/font/TtfNativeSystemFontProvider : korlibs/i
 
 public abstract interface class korlibs/image/font/VectorFont : korlibs/image/font/Font {
 	public abstract fun getGlyphPath (DILkorlibs/image/font/GlyphPath;Lkorlibs/io/lang/WStringReader;)Lkorlibs/image/font/GlyphPath;
-	public abstract fun renderGlyph (Lkorlibs/image/vector/Context2d;DILkorlibs/math/geom/Vector2D;Ljava/lang/Boolean;Lkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;Lkotlin/jvm/functions/Function0;)Z
+	public static synthetic fun getGlyphPath$default (Lkorlibs/image/font/VectorFont;DILkorlibs/image/font/GlyphPath;Lkorlibs/io/lang/WStringReader;ILjava/lang/Object;)Lkorlibs/image/font/GlyphPath;
+	public fun renderGlyph (Lkorlibs/image/vector/Context2d;DILkorlibs/math/geom/Vector2D;Ljava/lang/Boolean;Lkorlibs/image/font/GlyphMetrics;Lkorlibs/io/lang/WStringReader;Lkotlin/jvm/functions/Function0;)Z
 }
 
 public final class korlibs/image/font/VectorFont$DefaultImpls {
@@ -4514,7 +4520,7 @@ public abstract interface class korlibs/image/format/ASE$AseCell : korlibs/image
 	public abstract fun getOpacity ()I
 	public abstract fun getX ()I
 	public abstract fun getY ()I
-	public abstract fun resolve ()Lkorlibs/image/format/ASE$AseCell;
+	public fun resolve ()Lkorlibs/image/format/ASE$AseCell;
 }
 
 public final class korlibs/image/format/ASE$AseCell$DefaultImpls {
@@ -5376,7 +5382,9 @@ public abstract class korlibs/image/format/ImageFormat : korlibs/image/format/Ba
 
 public abstract interface class korlibs/image/format/ImageFormatDecoder {
 	public abstract fun decode (Lkorlibs/io/file/VfsFile;Lkorlibs/image/format/ImageDecodingProps;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun decode$default (Lkorlibs/image/format/ImageFormatDecoder;Lkorlibs/io/file/VfsFile;Lkorlibs/image/format/ImageDecodingProps;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public abstract fun decodeSuspend ([BLkorlibs/image/format/ImageDecodingProps;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun decodeSuspend$default (Lkorlibs/image/format/ImageFormatDecoder;[BLkorlibs/image/format/ImageDecodingProps;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
 public final class korlibs/image/format/ImageFormatDecoder$DefaultImpls {
@@ -5385,7 +5393,8 @@ public final class korlibs/image/format/ImageFormatDecoder$DefaultImpls {
 }
 
 public abstract interface class korlibs/image/format/ImageFormatEncoder {
-	public abstract fun encodeSuspend (Lkorlibs/image/format/ImageDataContainer;Lkorlibs/image/format/ImageEncodingProps;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun encodeSuspend (Lkorlibs/image/format/ImageDataContainer;Lkorlibs/image/format/ImageEncodingProps;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun encodeSuspend$default (Lkorlibs/image/format/ImageFormatEncoder;Lkorlibs/image/format/ImageDataContainer;Lkorlibs/image/format/ImageEncodingProps;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
 public final class korlibs/image/format/ImageFormatEncoder$DefaultImpls {
@@ -6262,7 +6271,7 @@ public final class korlibs/image/paint/Stroke {
 }
 
 public abstract interface class korlibs/image/paint/TransformedPaint : korlibs/image/paint/Paint {
-	public abstract fun applyMatrix (Lkorlibs/math/geom/Matrix;)Lkorlibs/image/paint/TransformedPaint;
+	public fun applyMatrix (Lkorlibs/math/geom/Matrix;)Lkorlibs/image/paint/TransformedPaint;
 	public abstract fun getTransform ()Lkorlibs/math/geom/Matrix;
 	public abstract fun getUnits ()Lkorlibs/image/paint/GradientUnits;
 	public abstract fun replaceMatrix (Lkorlibs/math/geom/Matrix;)Lkorlibs/image/paint/TransformedPaint;
@@ -6578,11 +6587,11 @@ public class korlibs/image/style/DOM$DomElement {
 }
 
 public abstract interface class korlibs/image/style/DOM$DomListener {
-	public abstract fun addedClass (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
-	public abstract fun addedId (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
-	public abstract fun removedClass (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
-	public abstract fun removedId (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
-	public abstract fun updatedElement (Lkorlibs/image/style/DOM$DomElement;)V
+	public fun addedClass (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
+	public fun addedId (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
+	public fun removedClass (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
+	public fun removedId (Lkorlibs/image/style/DOM$DomElement;Ljava/lang/String;)V
+	public fun updatedElement (Lkorlibs/image/style/DOM$DomElement;)V
 }
 
 public final class korlibs/image/style/DOM$DomListener$DefaultImpls {
@@ -6712,16 +6721,16 @@ public final class korlibs/image/text/HorizontalAlign$Companion {
 }
 
 public abstract interface class korlibs/image/text/ITextRendererActions {
-	public abstract fun advance (D)V
+	public fun advance (D)V
 	public abstract fun getCurrentLineNum ()I
 	public abstract fun getGlyphMetrics (Lkorlibs/io/lang/WStringReader;I)Lkorlibs/image/font/GlyphMetrics;
 	public abstract fun getKerning (II)D
 	public abstract fun getLineHeight ()D
 	public abstract fun getPos ()Lkorlibs/math/geom/Vector2D;
 	public abstract fun getTransform ()Lkorlibs/math/geom/Matrix;
-	public abstract fun newLine (DZ)V
+	public fun newLine (DZ)V
 	public abstract fun put (Lkorlibs/io/lang/WStringReader;I)Lkorlibs/image/font/GlyphMetrics;
-	public abstract fun reset ()V
+	public fun reset ()V
 	public abstract fun setCurrentLineNum (I)V
 	public abstract fun setFont (Lkorlibs/image/font/Font;D)V
 	public abstract fun setPos (Lkorlibs/math/geom/Vector2D;)V
@@ -6836,10 +6845,10 @@ public final class korlibs/image/text/RichTextData$Line : korlibs/datastructure/
 
 public abstract interface class korlibs/image/text/RichTextData$Node {
 	public abstract fun getHeight ()D
-	public abstract fun getLineHeight ()D
+	public fun getLineHeight ()D
 	public abstract fun getText ()Ljava/lang/String;
 	public abstract fun getWidth ()D
-	public abstract fun withStyle (Lkorlibs/image/text/RichTextData$Style;)Lkorlibs/image/text/RichTextData$Node;
+	public fun withStyle (Lkorlibs/image/text/RichTextData$Style;)Lkorlibs/image/text/RichTextData$Node;
 }
 
 public final class korlibs/image/text/RichTextData$Node$DefaultImpls {
@@ -7094,7 +7103,7 @@ public final class korlibs/image/text/TextAlignment$Companion {
 }
 
 public abstract interface class korlibs/image/text/TextRenderer {
-	public abstract fun getVersion ()I
+	public fun getVersion ()I
 	public abstract fun run (Lkorlibs/image/text/ITextRendererActions;Ljava/lang/Object;DLkorlibs/image/font/Font;)V
 }
 
@@ -7634,10 +7643,10 @@ public final class korlibs/image/vector/BlendMode : java/lang/Enum, korlibs/imag
 
 public abstract interface class korlibs/image/vector/BoundsDrawable : korlibs/image/vector/SizedDrawable {
 	public abstract fun getBounds ()Lkorlibs/math/geom/Rectangle;
-	public abstract fun getHeight ()I
-	public abstract fun getLeft ()I
-	public abstract fun getTop ()I
-	public abstract fun getWidth ()I
+	public fun getHeight ()I
+	public fun getLeft ()I
+	public fun getTop ()I
+	public fun getWidth ()I
 }
 
 public final class korlibs/image/vector/BoundsDrawable$DefaultImpls {
@@ -8449,11 +8458,13 @@ public final class korlibs/image/vector/SDFKt {
 }
 
 public abstract interface class korlibs/image/vector/Shape : korlibs/image/vector/BoundsDrawable {
-	public abstract fun buildSvg (Lkorlibs/image/vector/SvgBuilder;)V
-	public abstract fun containsPoint (DD)Z
-	public abstract fun getBounds ()Lkorlibs/math/geom/Rectangle;
+	public fun buildSvg (Lkorlibs/image/vector/SvgBuilder;)V
+	public fun containsPoint (DD)Z
+	public fun getBounds ()Lkorlibs/math/geom/Rectangle;
 	public abstract fun getBounds (Z)Lkorlibs/math/geom/Rectangle;
-	public abstract fun getPath (Lkorlibs/math/geom/vector/VectorPath;)Lkorlibs/math/geom/vector/VectorPath;
+	public static synthetic fun getBounds$default (Lkorlibs/image/vector/Shape;ZILjava/lang/Object;)Lkorlibs/math/geom/Rectangle;
+	public fun getPath (Lkorlibs/math/geom/vector/VectorPath;)Lkorlibs/math/geom/vector/VectorPath;
+	public static synthetic fun getPath$default (Lkorlibs/image/vector/Shape;Lkorlibs/math/geom/vector/VectorPath;ILjava/lang/Object;)Lkorlibs/math/geom/vector/VectorPath;
 }
 
 public final class korlibs/image/vector/Shape$DefaultImpls {
@@ -8541,18 +8552,18 @@ public abstract interface class korlibs/image/vector/SizedDrawable : korlibs/ima
 }
 
 public abstract interface class korlibs/image/vector/StyledShape : korlibs/image/vector/Shape {
-	public abstract fun buildSvg (Lkorlibs/image/vector/SvgBuilder;)V
-	public abstract fun draw (Lkorlibs/image/vector/Context2d;)V
-	public abstract fun drawInternal (Lkorlibs/image/vector/Context2d;)V
-	public abstract fun getBounds (Z)Lkorlibs/math/geom/Rectangle;
+	public fun buildSvg (Lkorlibs/image/vector/SvgBuilder;)V
+	public fun draw (Lkorlibs/image/vector/Context2d;)V
+	public fun drawInternal (Lkorlibs/image/vector/Context2d;)V
+	public fun getBounds (Z)Lkorlibs/math/geom/Rectangle;
 	public abstract fun getClip ()Lkorlibs/math/geom/vector/VectorPath;
 	public abstract fun getGlobalAlpha ()D
 	public abstract fun getPaint ()Lkorlibs/image/paint/Paint;
-	public abstract fun getPath ()Lkorlibs/math/geom/vector/VectorPath;
-	public abstract fun getPath (Lkorlibs/math/geom/vector/VectorPath;)Lkorlibs/math/geom/vector/VectorPath;
-	public abstract fun getSvgXmlAttributes (Lkorlibs/image/vector/SvgBuilder;)Ljava/util/Map;
+	public fun getPath ()Lkorlibs/math/geom/vector/VectorPath;
+	public fun getPath (Lkorlibs/math/geom/vector/VectorPath;)Lkorlibs/math/geom/vector/VectorPath;
+	public fun getSvgXmlAttributes (Lkorlibs/image/vector/SvgBuilder;)Ljava/util/Map;
 	public abstract fun getTransform ()Lkorlibs/math/geom/Matrix;
-	public abstract fun getUntransformedPath ()Lkorlibs/math/geom/vector/VectorPath;
+	public fun getUntransformedPath ()Lkorlibs/math/geom/vector/VectorPath;
 }
 
 public final class korlibs/image/vector/StyledShape$DefaultImpls {

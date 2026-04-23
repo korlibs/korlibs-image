@@ -26,7 +26,7 @@ suspend fun SystemFontRegistry(): DefaultFontRegistry = SystemFontRegistry(corou
 open class DefaultFontRegistry(val coroutineContext: CoroutineContext) : FontRegistry {
     private val lock = Lock()
     private val registeredFonts = LinkedHashMap<String?, Font>()
-    fun normalizeName(name: String?) = name?.toLowerCase()?.trim()
+    fun normalizeName(name: String?) = name?.lowercase()?.trim()
     fun register(font: Font, name: String = font.name): Font = lock { font.also { registeredFonts[normalizeName(name)] = it } }
     fun unregister(name: String): Font? = lock { registeredFonts.remove(name) }
     inline fun <T> registerTemporarily(font: Font, name: String = font.name, block: () -> T): T {
